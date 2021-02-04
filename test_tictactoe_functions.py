@@ -64,3 +64,59 @@ def test_doBestTurn_15():
 def test_doBestTurn_16():
     r = doBestTurn(({0},{8}),1)
     assert r==2 or r==6
+
+def test_whoWins1():
+    r = whoWins(({3},set()),2)
+    assert r==0
+
+def test_whoWins2():
+    r = whoWins(({3},{4}),1)
+    assert r==0
+
+def test_whoWins3():
+    r = whoWins(({0,3},{4}),2)
+    assert r==0
+
+def test_whoWins4():
+    r = whoWins(({0,3},{4,6}),1)
+    assert r==0
+
+def test_whoWins5():
+    r = whoWins(({0,2,3},{4,6}),2)
+    assert r==0
+
+def test_whoWins6():
+    r = whoWins(({0,2,3},{1,4,6}),1)
+    assert r==0
+
+def test_whoWins7():
+    r = whoWins(({0,2,3,7},{1,4,6}),2)
+    assert r==0
+
+def test_checkVictory1():
+    r = checkVictory(({0,2,3,7,8},{1,4,5,6}))
+    assert r==0
+
+def test_checkVictory2():
+    r = checkVictory(({0,1,2},{3,4}))
+    assert r==1
+
+def test_checkVictory3():
+    r = checkVictory(({0,1,8},{2,4,6}))
+    assert r==2
+
+def test_checkVictory4():
+    r = checkVictory(({0,1,3,8},{2,4,5,6}))
+    assert r==2
+
+def test_checkVictory5():
+    r = checkVictory(({1,4,7},{3,6}))
+    assert r==1
+
+def test_checkVictory6():
+    r = checkVictory(({1,2,3,5,6,7},{0,4}))
+    assert r==0
+
+def test_checkVictory7():
+    r = checkVictory(({2,4},{0,1,3,5,7,8}))
+    assert r==0
