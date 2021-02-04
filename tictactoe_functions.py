@@ -68,7 +68,7 @@ def checkVictory(playerData):
         for j in [0,1]:
             if 3*i+0 in playerData[j] and 3*i+1 in playerData[j] and 3*i+2 in playerData[j]:
                 return j+1
-            elif i in playerData[j] and i+3 in playerData[j] and i+6in playerData[j]:
+            elif i in playerData[j] and i+3 in playerData[j] and i+6 in playerData[j]:
                 return j+1
             elif 0 in playerData[j] and 4 in playerData[j] and 8 in playerData[j]:
                 return j+1
