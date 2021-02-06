@@ -90,7 +90,7 @@ def check_victory(player_data):
             elif (
                 i in player_data[j]
                 and i + 3 in player_data[j]
-                and i + 6 in playerData[j]
+                and i + 6 in player_data[j]
             ):
                 return j + 1
             elif 0 in player_data[j] and 4 in player_data[j] and 8 in player_data[j]:
